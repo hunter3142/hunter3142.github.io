@@ -18,7 +18,7 @@ theme_settings:
 
   # Icons
   rss: false
-  email_address: mathew.d.hunter@gmail.com# Full email address, e.g. "sam@example.com"
+  email_address: mathew.d.hunter@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
@@ -34,7 +34,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: https://twitter.com/Matt_D_Hunter?lang=en
+  twitter: Matt_D_Hunter
   wordpress:
   youtube:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blocitoff
-thumbnail-path: "img/blocitoff.png"
-short-description: Build a self-destructing to-do list application.
+title: Bloc Jams
+thumbnail-path: "img/blocjams.png"
+short-description: BlocJams is a Spotify replica for playing all of your favorite music.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocitoff.png)
+![]({{ site.baseurl }}/img/blocjams.png)
 
 ## Explanation
 
