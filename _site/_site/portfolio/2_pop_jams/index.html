@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Pop Jams | Matt Hunter</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://localhost:4000/portfolio/2_pop_jams/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Matt Hunter" href="http://localhost:4000/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic|Abril+Fatface" rel="stylesheet" type="text/css">
+	
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-106912138-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	
+</head>
+
+  <body>
+    <header class="site-header">
+  <nav class="site-nav">
+    <ul>
+      
+      
+      
+      
+      <li>
+        <a class="page-link" href="/about/">
+          About
+        </a>
+      </li>
+      
+      
+      
+      <li>
+        <a class="page-link" href="/contact/">
+          Contact
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </nav>
+
+  
+  <div class="call-out" 
+  style="background-image: url('/')">
+    <h1 class="site-title">
+      <a href="/">Matt Hunter</a>
+    </h1>
+    <div class="divider"></div>
+    <h1 class="title">Pop Jams</h1>
+  </div>
+  
+</header>
+
+    <div class="content">
+      <article >
+  <section class="post-content"><p class="center"><img src="/img/popjams.png" alt="" /></p>
+
+<h2 id="explanation">Explanation</h2>
+
+<p>The plan for this project was to build a sleek music app with full functionality and, most importantly, no ads. The design elements were developed by Bloc and it was my responsibility to utilize those elements while building a seamless music app. The songs were provided by Bloc as well, my task was to set up the code resposible for accessing and displaying the music database.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>There were a couple interesting problems that needed to be addressed during this project:</p>
+<ul>
+  <li>Ensuring that the site was responsive and optimized for mobile devices and computers alike.</li>
+  <li>Creating a seek/progress slider for the player bar that updates in real time.</li>
+</ul>
+
+<h2 id="solution">Solution</h2>
+
+<ul>
+  <li>Responsiveness was achieved using basic media queries like these:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">media</span> <span class="p">(</span><span class="nx">min</span><span class="o">-</span><span class="nx">width</span><span class="err">:</span> <span class="mi">640</span><span class="nx">px</span><span class="p">)</span> <span class="p">{</span>
+	<span class="p">.</span><span class="nx">column</span> <span class="p">{</span>
+     	<span class="nl">float</span><span class="p">:</span> <span class="nx">left</span><span class="p">;</span>
+     	<span class="nx">padding</span><span class="o">-</span><span class="nx">left</span><span class="err">:</span> <span class="mi">1</span><span class="nx">rem</span><span class="p">;</span>
+     	<span class="nx">padding</span><span class="o">-</span><span class="nx">right</span><span class="err">:</span> <span class="mi">1</span><span class="nx">rem</span><span class="p">;</span>
+ 	<span class="p">}</span>
+<span class="p">}</span>
+<span class="err">@</span><span class="nx">media</span> <span class="p">(</span><span class="nx">min</span><span class="o">-</span><span class="nx">width</span><span class="err">:</span> <span class="mi">1024</span><span class="nx">px</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">html</span> <span class="p">{</span> <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="err">:</span> <span class="mi">120</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<ul>
+  <li>The most important parts of the seekbars functionality are the following bits of code:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">notifyOnChange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">newValue</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">onChange</span> <span class="o">===</span> <span class="s1">'function'</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">scope</span><span class="p">.</span><span class="nx">onChange</span><span class="p">({</span><span class="na">value</span><span class="p">:</span> <span class="nx">newValue</span><span class="p">});</span>
+	<span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p style="text-align: center;">This keeps track of any changes made to the location of the seek slider.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">calculatePercent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">seekBar</span><span class="p">,</span> <span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">offsetX</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pageX</span> <span class="o">-</span> <span class="nx">seekBar</span><span class="p">.</span><span class="nx">offset</span><span class="p">().</span><span class="nx">left</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">seekBarWidth</span> <span class="o">=</span> <span class="nx">seekBar</span><span class="p">.</span><span class="nx">width</span><span class="p">();</span>
+	<span class="kd">var</span> <span class="nx">offsetXPercent</span> <span class="o">=</span> <span class="nx">offsetX</span> <span class="o">/</span> <span class="nx">seekBarWidth</span><span class="p">;</span>
+	<span class="nx">offsetXPercent</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">offsetXPercent</span><span class="p">);</span>
+	<span class="nx">offsetXPercent</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">offsetXPercent</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">offsetXPercent</span><span class="p">;</span>
+<span class="p">};</span></code></pre></figure>
+
+<p style="text-align: center;">This section determines how far the seek slider is offset from the left side of the seek bar, turns this into a percentage, then we can apply this percentage to the length of the song to determine which part of the song should be playing.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This site was a great way to test my AngularJS skills. The framework is pretty robust and though there are features I did not use in this project, it was a good introduction into just how effective using a javascript framework can be. Future iterations could include creating playlists, favoriting songs/albums, or sharing playlists with other users.</p>
+</section>
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+  <p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> and made with love.
+</p>
+</footer>
+
+
+  </body>
+</html>

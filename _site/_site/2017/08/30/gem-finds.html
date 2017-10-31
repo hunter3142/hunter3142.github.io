@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Gem Finds | Matt Hunter</title>
+	<meta name="description" content="Gems can be such an amazing time saver and can vastly improving your apps functionality, security, maintainability, and presentability. It can be very easy f...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://localhost:4000/2017/08/30/gem-finds.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Matt Hunter" href="http://localhost:4000/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic|Abril+Fatface" rel="stylesheet" type="text/css">
+	
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-106912138-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	
+</head>
+
+  <body>
+    <header class="site-header">
+  <nav class="site-nav">
+    <ul>
+      
+      
+      
+      
+      <li>
+        <a class="page-link" href="/about/">
+          About
+        </a>
+      </li>
+      
+      
+      
+      <li>
+        <a class="page-link" href="/contact/">
+          Contact
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </nav>
+
+  
+  <div class="call-out" 
+  style="background-image: url('/')">
+    <h1 class="site-title">
+      <a href="/">Matt Hunter</a>
+    </h1>
+    <div class="divider"></div>
+    <h1 class="title">Gem Finds</h1>
+  </div>
+  
+</header>
+
+    <div class="content">
+      <article >
+  <section class="post-content"><p>Gems can be such an amazing time saver and can vastly improving your apps functionality, security, maintainability, and presentability. It can be very easy for a new developer to load their app up with every gem under the sun.</p>
+
+<p>Letting your Gemfile get out of hand can quickly bloat your project with a lot of unnecessary code and some times it is better to build the methods on your own so that you can gain a deeper knowledge set.</p>
+
+<p>With all this being said I’ve created a list of Gems that I’ve either used and loved or plan to use on future projects.</p>
+
+<h3 id="authentication">Authentication</h3>
+<ul>
+  <li><a href="https://github.com/plataformatec/devise">Devise</a> - This is a very robust authentication gem with excellent documentation. When I used this gem I found the helpers like <code class="highlighter-rouge">user_signed_in?</code> and `current_user’ to make this much simpler but this is just the tip of the iceberg.</li>
+  <li><a href="https://github.com/CanCanCommunity/cancancan">CanCanCan</a> - All of your permissions are defined in the <code class="highlighter-rouge">Ability</code> class which can then be accessed by using <code class="highlighter-rouge">can?</code> and <code class="highlighter-rouge">cannot?</code>. This gem helps to better organize permissions and make your code more readable.</li>
+</ul>
+
+<h3 id="user-interfaces">User Interfaces</h3>
+<ul>
+  <li><a href="https://github.com/kaminari/kaminari">Kaminari</a> - When the number of items in your database starts to get a little unwieldy and you want the user or yourself to have more control over the pagination this is your solution. This full featured paginator has everything you need to make database display simple and effective.</li>
+  <li><a href="https://github.com/ankane/chartkick">Chartkick</a> - An awesomely simple tool to make JavaScript charts out of a single line of Ruby. All you have to do is pick what kind of chart you’d like and what data you’d like to be presented and viola, it’s just that easy.</li>
+  <li><a href="https://github.com/carrierwaveuploader/carrierwave">CarrierWave</a> - Need to allow the user to upload certain files but want to limit the types of files they can upload? Want to allow the user to upload files from remote locations? CarrierWave is a wonderfully straightforward solution.</li>
+  <li><a href="https://github.com/activerecord-hackery/ransack">Ransack</a> - Regardless of whether you just need a simple search form or a more advanced form Ransack is going to be a great option. Documentation for this gem is very clearly written for how robust it can be.</li>
+</ul>
+
+<h3 id="helping-the-developer">Helping the Developer</h3>
+<ul>
+  <li><a href="https://github.com/ctran/annotate_models">Annotate</a> - This gem allows you to add a comment showing the current schema to your models, tests, fixtures, factories, and/or routes. Very simple but can make a world of difference in terms of maintainability.</li>
+  <li><a href="https://github.com/bbatsov/rubocop">RuboCop</a> - This is a great code analyzer which helps the programmer stay within the guidlines in the <a href="https://github.com/bbatsov/ruby-style-guide">Ruby Style Guide</a>. It’s always nice to have your work checked for you.</li>
+  <li><a href="https://github.com/laserlemon/figaro">Figaro</a> - A gem focused on keeping sesitive configuration information, like tokens, out of Git. As a big added bonus it is also Heroku-friendly.</li>
+</ul>
+
+<h3 id="seo">SEO</h3>
+<ul>
+  <li><a href="https://github.com/kpumuk/meta-tags">MetaTags</a> - This plugin allows you to streamline the SEO process so you can get back to cranking out incredible content.</li>
+</ul>
+
+<hr />
+
+<h4 id="there-are-other-very-useful-gems-out-there-and-many-others-brewing-in-developers-heads-if-you-have-any-gems-you-love-please-feel-free-to-send-them-to-me-via-my-contacts-page-so-i-can-include-them-in-future-gem-finds-posts">There are other very useful gems out there and many others brewing in developers heads. If you have any gems you love please feel free to send them to me via my contacts page so I can include them in future Gem Finds posts.</h4>
+</section>
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+  <p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> and made with love.
+</p>
+</footer>
+
+
+  </body>
+</html>
