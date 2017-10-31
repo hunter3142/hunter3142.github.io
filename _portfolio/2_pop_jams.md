@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bloc Jams
-thumbnail-path: "img/blocjams.png"
-short-description: BlocJams is a Spotify replica for playing all of your favorite music.
+title: Pop Jams
+thumbnail-path: "img/popjams.png"
+short-description: Pop Jams is a Spotify replica for playing all of your favorite music.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocjams.png)
+![]({{ site.baseurl }}/img/popjams.png)
 
 ## Explanation
 

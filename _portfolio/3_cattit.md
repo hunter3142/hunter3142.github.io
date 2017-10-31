@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bloccit
-thumbnail-path: "img/bloccit.png"
-short-description: Bloccit is a Reddit clone.
+title: Cattit
+thumbnail-path: "img/cattit.png"
+short-description: Cattit is a Reddit clone.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/bloccit.png)
+![]({{ site.baseurl }}/img/cattit.png)
 
 ## Explanation
 

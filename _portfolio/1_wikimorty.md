@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Blocipedia
-thumbnail-path: "img/blocipedia.png"
+title: WikiMorty
+thumbnail-path: "img/wikimorty.png"
 short-description: A Wikipedia clone with a paid premium membership option.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocipedia.png)
+![]({{ site.baseurl }}/img/wikimorty.png)
 
 ## Explanation
 
-This build was meant to solidify and expand on some of the skills that I learned during the Bloccit project. It also gave me a chance to get used to implementing different types of gems into a project. With Blocipedia the user is able to purchase an upgraded "Premium" account which allows you to create private wikis and assign collaborators to private wikis. 
+This build was meant to solidify and expand on some of the skills that I learned during the Cattit project. It also gave me a chance to get used to implementing different types of gems into a project. With Blocipedia the user is able to purchase an upgraded "Premium" account which allows you to create private wikis and assign collaborators to private wikis. 
 
 ## Problem
 
